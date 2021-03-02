@@ -221,7 +221,7 @@ function showMsg() {
   message+=`本次运行获得金币${$.coins},现金${$.money}`
   return new Promise(resolve => {
     if (!jdNotify) {
-      await notify.sendNotify($.name, '',message)
+      notify.sendNotify($.name, '',message)
       $.log(`京东账号${$.index}${$.nickName}\n${message}`);
     }
     resolve()
