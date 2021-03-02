@@ -53,9 +53,9 @@ hostname= c.tieba.baidu.com
 
 */
 var $nobyda = nobyda();
-var cookieVal = $nobyda.read("SG_FW_VER=1.26.3; SP_FW_VER=3.230.35; BAIDUCUID=_uH8igunvi0OaBiu0OvqajaQvalo8283g8HAt_O6vt_4aSaWYa2t8_i51u0U81at06DmA; BAIDUZID=-qTq19Xt5vFUjHHeXxh1fxzzN6Iyg7S8mI64UAkNDjWI_jShwLd0SVYb3aGNz214D4klv3Xe-R4_x9OUZGKEL8g; TBBRAND=iPhone; _client_version=12.3.1; caid=%7B%22factors_data%22%3A%22ewogICJmYWN0b3JzVmVyc2lvbiIgOiAiMSIsCiAgImZhY3RvcnNGb3JDYWlkIiA6IHsKICAgICJwaHlzaWNhbE1lbW9yeSIgOiAiMjk1NjkxODc4NCIsCiAgICAiY2FycmllckluZm8iIDogIuS4reWbveeUteS%5C%2FoSIsCiAgICAibWFjaGluZSIgOiAiaVBob25lMTAsMyIsCiAgICAic3lzRmlsZVRpbWUiIDogIjE2MTIxMTQ3MjQuODY2NTgxIiwKICAgICJzY3JlZW5SZXNvbHV0aW9uIiA6ICIyNDM2IDExMjUiLAogICAgImNvdW50cnlDb2RlIiA6ICJDTiIsCiAgICAiYm9vdFNlY1RpbWUiIDogIjE2MTI1NDcxMTEiLAogICAgImRldmljZVR5cGUiIDogImlQaG9uZSIsCiAgICAic3lzdGVtTmFtZSIgOiAiaU9TIiwKICAgICJkZXZpY2VOYW1lIiA6ICJERDM0NEZFMDZGRjEwNEU0MDQzQTAzQjRBRkZBOEM2RiIsCiAgICAidGltZVpvbmUiIDogIjI4ODAwIiwKICAgICJsYW5ndWFnZSIgOiAiemgtSGFucy1DTiIsCiAgICAiZGlzayIgOiAiMjU1OTI2NTU0NjI0IiwKICAgICJzeXN0ZW1WZXJzaW9uIiA6ICIxMy43IiwKICAgICJjcHVOdW1iZXIiIDogIjYiLAogICAgIm1vZGVsIiA6ICJEMjJBUCIKICB9Cn0%3D%22%2C%22caid_valid%22%3A%220%22%7D; BDUSS=9vOFdxZ3REc3djdnF-Z35pLS1LSjk3OXpmTTlJWjZEYnBLYn5GV3pqY2JzMEJnSVFBQUFBJCQAAAAAAAAAAAEAAADnW~Q2s6y8ts7pwbcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABsmGWAbJhlgUm; BAIDU_WISE_UID=wapp_1612261086602_418; BAIDUID=4F0DE08B525718C1EEF2C95075413685:FG=1"}");
+var cookieVal = $nobyda.read("CookieTB");
 var useParallel = 0; //0自动切换,1串行,2并行(当贴吧数量大于30个以后,并行可能会导致QX崩溃,所以您可以自动切换)
-var singleNotifyCount = 50; //想签到几个汇总到一个通知里,这里就填几个(比如我有13个要签到的,这里填了5,就会分三次消息通知过去)
+var singleNotifyCount = 20; //想签到几个汇总到一个通知里,这里就填几个(比如我有13个要签到的,这里填了5,就会分三次消息通知过去)
 var process = {
   total: 0,
   result: [
