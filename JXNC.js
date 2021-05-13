@@ -305,7 +305,13 @@ function createAssistUser() {
   });
 }
 
-const notify = $.isNode() ?require('./sendNotify') : '';
+  if ($.isNode() && process.env.PET_NOTIFY_CONTROL) {
+    $.ctrTemp = `${process.env.PET_NOTIFY_CONTROL}` === 'false';
+  } else if ($.getdata('jdPetNotify')) {
+    $.ctrTemp = $.getdata('jdPetNotify') === 'false';
+  } else {
+    $.ctrTemp = `${jdNotify}` === 'false';
+  }
 
 function taskUrl(function_path, body) {
   return {
